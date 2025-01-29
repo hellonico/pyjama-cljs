@@ -11,7 +11,9 @@ Quick Prototype to get pyjama to run in the browser
 ## Clojure Part
 
 ```bash
+# requires npm
 npm install 
+# requires npx
 npx shadow-cljs watch app
 ```
 
