@@ -8,7 +8,26 @@ Quick Prototype to get pyjama to run in the browser
 
 # Getting Started
 
-```bash
+## Clojure Part
 
+```bash
+npm install 
 npx shadow-cljs watch app
 ```
+
+## Nginx on docker
+
+This is needed to set up the CORS parameters to access Llama
+
+```
+cd nginx
+./stop.sh && ./build.sh && ./start.sh
+```
+
+## Start HTTP server and Navigate 
+
+```bash
+python -m http.server --dir public
+```
+
+[http://localhost:8000](http://localhost:8000)
