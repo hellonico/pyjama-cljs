@@ -1,0 +1,1 @@
+docker run -d --name my-nginx -p 8888:80 my-nginx
