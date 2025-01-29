@@ -1,9 +1,7 @@
 (ns pyjama.sample
   (:require-macros [cljs.core.async.macros :refer [go]])
-  (:require [cljs.core.async :refer [<!]]
-            [cljs.core.async :refer [<! go]]
+  (:require [cljs.core.async :refer [<! go]]
             [pyjama.core]
-            [reagent.core :as r]
             [reagent.core :as r]
             [reagent.dom :as rd]))
 
@@ -50,6 +48,5 @@
    [:div
     (:response @state)]])
 
-;; Mount the app
 (defn ^:export init []
   (rd/render [app] (.getElementById js/document "app")))
