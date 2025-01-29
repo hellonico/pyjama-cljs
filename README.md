@@ -4,8 +4,6 @@ Quick Prototype to get pyjama to run in the browser
 
 ![](pyjama_ai_cljs_01.png)
 
-![](pyjama_ai_cljs_02.png)
-
 # Getting Started
 
 ## Clojure Part
@@ -13,6 +11,8 @@ Quick Prototype to get pyjama to run in the browser
 ```bash
 # requires npm
 npm install 
+# needed ?
+clojure -M:shadow-cljs npm-deps
 # requires npx
 npx shadow-cljs watch app
 ```
@@ -28,8 +28,11 @@ cd nginx
 
 ## Start HTTP server and Navigate 
 
-```bash
-python -m http.server --dir public
-```
+No need to start a http server, shadow-cljs already includes one.
 
 [http://localhost:8000](http://localhost:8000)
+
+## DeepSeek
+
+
+![](pyjama_ai_cljs_03.png)
