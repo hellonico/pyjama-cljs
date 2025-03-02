@@ -8,10 +8,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Snippet&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="white.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
     <title>Pyjama AI - CLJS</title>
+    <style>
+        button {
+            background-color: #3498db; /* Initial color */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s ease-in-out; /* Smooth transition */
+        }
+
+        @keyframes colorLoop {
+            0% { background-color: #3498db; }
+            50% { background-color: #2ecc71; }
+            100% { background-color: #3498db; }
+        }
+
+        button.loop {
+            animation: colorLoop 2s infinite alternate;
+        }
+
+        .markmap {
+            position: relative;
+        }
+        .markmap > svg {
+            width: 100%;
+            min-height: 300px;
+        }
+    </style>
 </head>
 <body>
-<div id="app"></div>
+<div id="app">
+</div>
 <script src="/js/main.js"></script>
+<script>
+    window.markmap = {
+        autoLoader: { manual: true },
+    };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@latest"></script>
+<script>
+
+//    setInterval(() => {
+//        console.log("Hello");
+//        markmap.autoLoader.renderAll();
+//    }, 5000);
+</script>
 </body>
 </html>
